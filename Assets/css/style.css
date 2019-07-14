@@ -1,8 +1,14 @@
+*,
+*::before,
+*::after
+{
+box-sizing: border-box;
+}
 
 
 .container
 {
- height: 580px;   
+ height: 600px;   
  width: 100%;
  background-image: url('../images/paper.gif') ;
  }
@@ -12,8 +18,76 @@
  text-align: center;   
  }
 
- section
+ #desc
  {
- width: 50%;    
+ width: 75%;    
  background-color: #dfc0ab;   
  }
+
+
+ .game_console
+ {
+ width:50%;
+ height: 325px;
+ background-color: blue;
+ }
+
+ .row
+ {
+  height: 108px;
+  background-color: green; 
+  }
+
+ #points
+ {
+    float: left; 
+    width : 50%; 
+    height: 108px;
+     background-color: red;  
+ }
+
+ #winLoss
+ {
+    float: left; 
+    width : 50%; 
+    height: 108px;
+    background-color:yellow;  
+ }
+
+ /*
+ .clearfix::after
+ {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+*/
+
+  #crystal1
+  {
+  width: 25%;
+  height: 108px;
+  background-color:whitesmoke; 
+  }
+
+  #crystal2
+  {
+  width: 25%;
+  height: 108px;
+  background-color:whitesmoke; 
+  }
+
+  #crystal3
+  {
+  width: 25%;
+  height: 108px;
+  background-color:whitesmoke; 
+  }
+
+  #crystal4
+  {
+  width: 25%;
+  height: 108px;
+  background-color:whitesmoke; 
+  }
+  
