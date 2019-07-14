@@ -1,0 +1,19 @@
+
+
+.container
+{
+ height: 580px;   
+ width: 100%;
+ background-image: url('../images/paper.gif') ;
+ }
+
+ h1
+ {
+ text-align: center;   
+ }
+
+ section
+ {
+ width: 50%;    
+ background-color: #dfc0ab;   
+ }
