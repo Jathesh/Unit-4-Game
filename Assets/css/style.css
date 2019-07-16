@@ -28,14 +28,14 @@ box-sizing: border-box;
  .game_console
  {
  width:50%;
- height: 325px;
- background-color: blue;
+ height: 312px;
+ background-color:whitesmoke;
  }
 
  .row
  {
-  height: 108px;
-  background-color: green; 
+  height: 102px;
+  background-color: whitesmoke; 
   }
 
  #points
@@ -43,7 +43,7 @@ box-sizing: border-box;
     float: left; 
     width : 50%; 
     height: 108px;
-     background-color: red;  
+     background-color:whitesmoke;  
  }
 
  #winLoss
@@ -51,7 +51,7 @@ box-sizing: border-box;
     float: left; 
     width : 50%; 
     height: 108px;
-    background-color:yellow;  
+    background-color:whitesmoke;  
  }
 
  /*
@@ -89,5 +89,20 @@ box-sizing: border-box;
   width: 25%;
   height: 108px;
   background-color:whitesmoke; 
+  }
+
+  #score
+  {
+   width:50%;
+   height: 108px;
+   background-color:whitesmoke; 
+
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 108px;
   }
   
