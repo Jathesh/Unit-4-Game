@@ -10,6 +10,10 @@
 </head>
 <body>
 
+   <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <!--<script type="text/javascript" src="./Assets/javascript/crystal.js"></script>-->
+
 <div class="container">
 
     <header>
@@ -44,7 +48,7 @@
         <div class="row">
 
                 <div class="col-md-6" id="points">
-                    <h5>
+                    <h5 id="tgtScore">
                         Target Score : <br>
                     </h5>
                 </div>
@@ -97,7 +101,21 @@
     <footer>
     </footer>
 
-</div>    
+</div>  
+
+<script type="text/javascript">
+    function getRandomInt(min,max)
+    {
+      return Math.floor((Math.random() * (max - min + 1)) + min);
+    }
+
+    targetVar = getRandomInt(19,120);
+    debugger;
+
+    var totScore = $("<h5>" + targetVar + "<h5>" ) ;
+    $("#points").append(totScore) ;
+
+</script>
     
 </body>
 </html>
