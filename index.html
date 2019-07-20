@@ -48,7 +48,7 @@
         <div class="row">
 
                 <div class="col-md-6" id="points">
-                    <h5 id="tgtScore">
+                    <h5>
                         Target Score : <br>
                     </h5>
                 </div>
@@ -104,6 +104,10 @@
 </div>  
 
 <script type="text/javascript">
+
+/*-----------------------------Initialize Variable -------------------------------*/
+    var Wins = 0 ;
+    var Loss = 0 ;
     function getRandomInt(min,max)
     {
       return Math.floor((Math.random() * (max - min + 1)) + min);
@@ -114,6 +118,11 @@
 
     var totScore = $("<h5>" + targetVar + "<h5>" ) ;
     $("#points").append(totScore) ;
+
+    $("#winLoss").empty();
+    var winLossTxt = $("<h5>"+ "Wins: "+ Wins + "<h5>") ;
+    var lossWinTxt = $("<h5>"+ "Loss: "+ Loss + "<h5>") ;   
+    $("#winLoss").append(winLossTxt,lossWinTxt);
 
 </script>
     
