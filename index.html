@@ -137,6 +137,10 @@
     yScore = 0 ;    
     targetVar = 0 ;
     arrayScore = [] ;
+    crystalValue.crystal1 = "" ;
+    crystalValue.crystal2 = "" ;
+    crystalValue.crystal3 = "" ;
+    crystalValue.crystal4 = "" ;
     }
 
     function updateWinsLoss()
@@ -231,24 +235,32 @@
             yScore = yScore + parseInt(arrayScore[i])   ;
         }
         updateScore() ;
+    
     }
 
     if ( parseInt(yScore) == parseInt(targetVar))
     {
-    wins = wins + 1 ;
+    debugger;    
+    Wins = Wins + 1 ;
     updateWinsLoss();
-    debugger;
     clearAll()
     targetVar = getRandomInt(19,120);
+    totScore();
+    updateScore() ;
     } 
 
     else if( parseInt(yScore) > parseInt(targetVar))
     {
+    debugger;
     Loss = Loss + 1 ;
     updateWinsLoss() ;
     clearAll() ;
     targetVar = getRandomInt(19,120);
-    }
+    totScore();
+    updateScore() ;
+    }    
+
+
 
     debugger;
 
