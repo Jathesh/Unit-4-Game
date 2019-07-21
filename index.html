@@ -123,16 +123,29 @@
       return Math.floor((Math.random() * (max - min + 1)) + min);
     }
 
-    targetVar = getRandomInt(19,120);
-    debugger;
-
+    function totScore()
+    {
+    $("#points").empty();
+    var totTxt = $("<h5>"+ "Target Score: " + "<h5>") ;
+    $("#points").append(totTxt);
     var totScore = $("<h5>" + targetVar + "<h5>" ) ;
     $("#points").append(totScore) ;
+    }
 
-    $("#winLoss").empty();
+    function clearAll()
+    {
+    yScore = 0 ;    
+    targetVar = 0 ;
+    arrayScore = [] ;
+    }
+
+    function updateWinsLoss()
+    {
+     $("#winLoss").empty();
     var winLossTxt = $("<h5>"+ "Wins: "+ Wins + "<h5>") ;
     var lossWinTxt = $("<h5>"+ "Loss: "+ Loss + "<h5>") ;   
     $("#winLoss").append(winLossTxt,lossWinTxt);
+    }
 
     function updateScore()
     {
@@ -140,6 +153,13 @@
     var scoreTxt = $("<br>"+ "<h5>"+ "Score: "+ yScore + "<h5>") ;
     $("#score").append(scoreTxt);
     }
+
+    debugger;
+    targetVar = getRandomInt(19,120);
+    totScore() ;
+    
+
+    debugger;
 
     $(".crystal").on("click",function(){
 
@@ -212,6 +232,24 @@
         }
         updateScore() ;
     }
+
+    if ( parseInt(yScore) == parseInt(targetVar))
+    {
+    wins = wins + 1 ;
+    updateWinsLoss();
+    debugger;
+    clearAll()
+    targetVar = getRandomInt(19,120);
+    } 
+
+    else if( parseInt(yScore) > parseInt(targetVar))
+    {
+    Loss = Loss + 1 ;
+    updateWinsLoss() ;
+    clearAll() ;
+    targetVar = getRandomInt(19,120);
+    }
+
     debugger;
 
     }) /*--on click */
