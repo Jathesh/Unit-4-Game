@@ -109,6 +109,7 @@
     var Wins = 0 ;
     var Loss = 0 ;
     var yScore = 0 ;
+    var arrayScore = [] ;
     var crystalValue =
     {
     crystal1 : "" ,
@@ -133,9 +134,12 @@
     var lossWinTxt = $("<h5>"+ "Loss: "+ Loss + "<h5>") ;   
     $("#winLoss").append(winLossTxt,lossWinTxt);
 
+    function updateScore()
+    {
     $("#score").empty();
     var scoreTxt = $("<br>"+ "<h5>"+ "Score: "+ yScore + "<h5>") ;
     $("#score").append(scoreTxt);
+    }
 
     $(".crystal").on("click",function(){
 
@@ -150,7 +154,15 @@
         {
             crystalValue.crystal1 = getRandomInt(1,12) ;
             alert (crystalValue.crystal1);
+            
         }
+        yScore = 0 ;
+        arrayScore.push(crystalValue.crystal1);
+        for (i=0;i<arrayScore.length;i++)
+        {
+            yScore = yScore + parseInt(arrayScore[i])   ;
+        }
+        updateScore() ;
     }
     else if ( currentCrystal === "crystal2")
     {
@@ -158,7 +170,15 @@
         {
             crystalValue.crystal2 = getRandomInt(1,12) ;
             alert (crystalValue.crystal2);
+            
         }
+        yScore = 0 ;
+        arrayScore.push(crystalValue.crystal2);
+        for (i=0;i<arrayScore.length;i++)
+        {
+            yScore = yScore + parseInt(arrayScore[i])   ;
+        }
+        updateScore() ;
     }
     else if ( currentCrystal === "crystal3")
     {
@@ -166,7 +186,15 @@
         {
             crystalValue.crystal3 = getRandomInt(1,12) ;
             alert (crystalValue.crystal3);
+            
         }
+        yScore = 0 ;
+        arrayScore.push(crystalValue.crystal3);
+        for (i=0;i<arrayScore.length;i++)
+        {
+            yScore = yScore + parseInt(arrayScore[i])   ;
+        }
+        updateScore() ;
     }
     else if ( currentCrystal === "crystal4") 
     {
@@ -174,8 +202,15 @@
         {
             crystalValue.crystal4 = getRandomInt(1,12) ;
             alert (crystalValue.crystal4);
+            
         }
-    
+        yScore = 0 ;
+        arrayScore.push(crystalValue.crystal4);
+        for (i=0;i<arrayScore.length;i++)
+        {
+            yScore = yScore + parseInt(arrayScore[i])   ;
+        }
+        updateScore() ;
     }
     debugger;
 
